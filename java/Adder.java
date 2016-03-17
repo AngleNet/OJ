@@ -53,12 +53,16 @@ class Adder{
     }
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        while(in.hasNext()){
+        int numCases = in.nextInt();
+        int i = 0;
+        while(++i <= numCases){
             String s1 = in.next();
             String s2 = in.next();
-            System.out.println(add(s1, s2));
-            int tester = Integer.parseInt(s1) + Integer.parseInt(s2);
-            System.out.println("Should be: " + tester);
+            System.out.println("Case "+ i + ":");
+            System.out.println(s1 + " + " + s2 + " = " + add(s1, s2));
+            if(i < numCases){
+                System.out.println();
+            }
         }
     }
 }
